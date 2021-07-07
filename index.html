@@ -89,7 +89,39 @@
     color: #303030
 }
         
-        .cust-check{display:block}.cust-check--white .cust-check__title{border-color:#E8F8FD;background:transparent}.cust-check--active .cust-check__title{align-items:flex-start;border-width:1.5px;border-color:#0070E2}@media only screen and (min-width: 320px){.cust-check--active .cust-check__title{border-width:2px}}.cust-check__percent{font:700 10px/14px "Poppins",sans-serif;color:#303030}@media only screen and (min-width: 320px){.cust-check__percent{font-size:16px;line-height:22px}}.cust-check__percent-item{position:absolute;top:0;left:0;width:0;height:100%;border-radius:8px 0px 0px 8px;background:#E8F8FD;z-index:-1}.cust-check input{display:none}.cust-check__title{position:relative;display:flex;align-items:center;justify-content:space-between;padding:8px 12px;font-weight:bold;font-size:10px;line-height:14px;letter-spacing:0.01em;background-color:#F7F7F9;border:1px solid #EFEFEF;border-radius:8px;transition:.45s}.cust-check__title span{display:block}input:checked+.cust-check__title{background-color:#dadae3}@media only screen and (min-width: 320px){.cust-check__title{font-size:16px;line-height:22px;letter-spacing:0.01em;padding:12px 12px 12px 16px}}.cust-check--2 .cust-check__title{padding:8px;align-items:flex-start;justify-content:flex-start}.cust-check--2 .cust-check__check{display:block;width:14px;height:14px;border:1px solid #D8D8D8;border-radius:4px;margin-right:8px;flex-shrink:0}.cust-check--2 input:checked ~ .cust-check__title .cust-check__check{background-color:#303030;background-image:url("/images/icons/checked-white.svg");background-repeat:no-repeat;background-position:center}.cust-check--2 input:checked ~ .cust-check__title{background-color:transparent}.cust-check--2.success input:checked ~ .cust-check__title{background-color:#71C083;color:#fff}.cust-check--2.success input:checked ~ .cust-check__title .cust-check__check{background-color:#fff;border-color:#fff;background-image:url("/images/icons/checked-green.svg")}.cust-check--2.error input:checked ~ .cust-check__title{background-color:#FB3D24;color:#fff}.cust-check--2.error input:checked ~ .cust-check__title .cust-check__check{background-color:#fff;border-color:#fff;background-image:none;display:flex;align-items:center;justify-content:center;font-size:7px}.cust-check--2.error input:checked ~ .cust-check__title .cust-check__check:after{content:"\01F5D9";color:#FB3D24}.cust-check__subtitle{font:800 8px/12px "Poppins",sans-serif;color:#0094F4}@media only screen and (min-width: 320px){.cust-check__subtitle{font-size:12px;line-height:18px}}
+        .cust-check{display:block; position: relative;}
+        .cust-check--white .cust-check__title{border-color:#E8F8FD;background:transparent}
+        .cust-check--active .cust-check__title{align-items:flex-start;border-width:1.5px;border-color:#0070E2}
+        @media only screen and (min-width: 320px){.cust-check--active .cust-check__title{border-width:2px}}
+        .cust-check__percent{font:700 10px/14px "Poppins",sans-serif;color:#303030}
+        @media only screen and (min-width: 320px){.cust-check__percent{font-size:16px;line-height:22px}}
+        .cust-check__percent-item{position:absolute;top:0;left:0;width:0;height:100%;border-radius:8px 0px 0px 8px;background:#E8F8FD;z-index:-1}
+        .cust-check input{
+            position: absolute;
+            left:0;
+            top:0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+        }
+        .cust-check__title{
+            position:relative;
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            padding:8px 12px;
+            font-weight:bold;
+            font-size:10px;
+            line-height:14px;
+            letter-spacing:0.01em;
+            background-color:#F7F7F9;
+            border:1px solid #EFEFEF;
+            border-radius:8px;transition:.45s}
+        .cust-check__title span{display:block}
+        input:checked+.cust-check__title{background-color:#dadae3}
+        input:focus+.cust-check__title{box-shadow: 0 0 2px 1px #1A9090 ;}
+        @media only screen and (min-width: 320px) {.cust-check__title{font-size:16px;line-height:22px;letter-spacing:0.01em;padding:12px 12px 12px 16px}}
+        .cust-check--2 .cust-check__title{padding:8px;align-items:flex-start;justify-content:flex-start}.cust-check--2 .cust-check__check{display:block;width:14px;height:14px;border:1px solid #D8D8D8;border-radius:4px;margin-right:8px;flex-shrink:0}.cust-check--2 input:checked ~ .cust-check__title .cust-check__check{background-color:#303030;background-image:url("/images/icons/checked-white.svg");background-repeat:no-repeat;background-position:center}.cust-check--2 input:checked ~ .cust-check__title{background-color:transparent}.cust-check--2.success input:checked ~ .cust-check__title{background-color:#71C083;color:#fff}.cust-check--2.success input:checked ~ .cust-check__title .cust-check__check{background-color:#fff;border-color:#fff;background-image:url("/images/icons/checked-green.svg")}.cust-check--2.error input:checked ~ .cust-check__title{background-color:#FB3D24;color:#fff}.cust-check--2.error input:checked ~ .cust-check__title .cust-check__check{background-color:#fff;border-color:#fff;background-image:none;display:flex;align-items:center;justify-content:center;font-size:7px}.cust-check--2.error input:checked ~ .cust-check__title .cust-check__check:after{content:"\01F5D9";color:#FB3D24}.cust-check__subtitle{font:800 8px/12px "Poppins",sans-serif;color:#0094F4}@media only screen and (min-width: 320px){.cust-check__subtitle{font-size:12px;line-height:18px}}
 
     </style>
 </head>
